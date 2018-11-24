@@ -50,6 +50,14 @@ var futureMarker = L.ExtraMarkers.icon({
     prefix: 'fa'
 });
 
+var workingMarker = L.ExtraMarkers.icon({
+    icon: 'fa-bolt',
+    markerColor: 'blue',
+    shape: 'star',
+    prefix: 'fa'
+});
+
+
 
 
 
@@ -177,20 +185,20 @@ L.marker([68.22, -125.7], {
 
 
 L.marker([-4.590, 137.442], {
-        icon: siteMarker,
-    }).bindLabel('<b>好奇号 | Curiosity</b>', {
+        icon: workingMarker,
+    }).bindLabel('<b>好奇号 | Curiosity | 2011</b>', {
         noHide: true,
         offset: [20, -30]
     }).addTo(marsSites),
     L.marker([-14.568, 175.473], {
         icon: siteMarker,
-    }).bindLabel('<b>勇气号 | Spirit</b>', {
+    }).bindLabel('<b>勇气号 | Spirit | 2003</b>', {
         noHide: true,
         offset: [20, -30]
     }).addTo(marsSites),
     L.marker([-1.946, 354.473], {
         icon: siteMarker,
-    }).bindLabel('<b>机遇号 | Opportunity</b>', {
+    }).bindLabel('<b>机遇号 | Opportunity | 2003</b>', {
         noHide: true,
         offset: [20, -30]
     }).addTo(marsSites);
