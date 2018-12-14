@@ -82,9 +82,9 @@ var marsBase = new L.LayerGroup().addTo(map).setZIndex(999);
 
 // create popup contents
 var customPopup = {
-    base: "《挑战吧！太空》基地<br/> 这里是<a href='https://m.youku.com/video/id_XMzkxODc0MTYyOA==.html?spm=a2h1n.8261147.reload_201812.1~3%213~DL~DT~A&s=f62934f3a2004c0a80e9&source=' target='_blank'>《挑战吧！太空》</a>的基地。<div> <img src='assets/img/the-mars-show.png' style='width:100%;'> </div>",
-    mars2: "<a href='https://en.wikipedia.org/wiki/Mars_2'>Wikipedia</a>",
-    schiaparelli: "<a href='https://en.wikipedia.org/wiki/Schiaparelli_EDM_lander'>Wikipedia</a>",
+    base: "<h4>《挑战吧！太空》基地 </h4><br/> 这里是<a href='https://m.youku.com/video/id_XMzkxODc0MTYyOA==.html?spm=a2h1n.8261147.reload_201812.1~3%213~DL~DT~A&s=f62934f3a2004c0a80e9&source=' target='_blank'>《挑战吧！太空》</a>的基地。神秘的火星探索，将在这里展开。<div> <img src='assets/images/the-mars-show.png' style='width:100%;'> </div>",
+    mars2: "<h4>火星2号</h4> <a href='https://en.wikipedia.org/wiki/Mars_2'>火星2号@Wikipedia</a> <br> 火星2号是苏联于1970年代进行的火星计划的一部分。<img src='assets/images/mars2.jpg'>",
+    schiaparelli: "<h4>斯基亚帕雷利EDM登陆器</h4><a href='https://en.wikipedia.org/wiki/Schiaparelli_EDM_lander'>斯基亚帕雷利EDM登陆器@Wikipedia</a> <img src='assets/images/Schiaparelli_Lander_Model_at_ESOC.jpg'> ",
     beagle2: " <a href='https://en.wikipedia.org/wiki/Beagle_2'>Wikipedia</a> ",
 }
 
@@ -123,7 +123,7 @@ L.marker([-45.653, 46.865], {
 }).bindLabel('<b>火星二号 | Mars 2 | 1971</b>', {
     noHide: true,
     offset: [20, -30]
-}).addTo(marsFailedSites)
+}).bindPopup(customPopup['mars2']).addTo(marsFailedSites)
 
 L.marker([-45, 202], {
     icon: failedMarker,

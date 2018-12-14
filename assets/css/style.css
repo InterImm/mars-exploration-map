@@ -37,3 +37,10 @@
 .leaflet-popup-content a {
     color: #ff8f8f;
 }
+.leaflet-popup-content {
+    width: 400px !important;
+}
+
+.leaflet-popup-content img {
+    width: 100%;
+}
