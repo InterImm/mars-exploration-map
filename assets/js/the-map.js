@@ -73,7 +73,7 @@ var basemapMOLAColor = new L.tileLayer(baseUrl + 'mola-color/{z}/{x}/{y}.png', {
 
 
 var baseMaps = {
-    "Color MOLA Elevation": basemapMOLAColor
+    "地图底图：Color MOLA Elevation": basemapMOLAColor
 };
 
 
@@ -82,7 +82,7 @@ var marsBase = new L.LayerGroup().addTo(map).setZIndex(999);
 
 // create popup contents
 var customPopup = {
-    base: "《挑战吧！太空》基地<br/> 这里是《挑战吧！太空》的基地",
+    base: "《挑战吧！太空》基地<br/> 这里是<a href='https://m.youku.com/video/id_XMzkxODc0MTYyOA==.html?spm=a2h1n.8261147.reload_201812.1~3%213~DL~DT~A&s=f62934f3a2004c0a80e9&source=' target='_blank'>《挑战吧！太空》</a>的基地。<div> <img src='assets/img/the-mars-show.png' style='width:100%;'> </div>",
     mars2: "<a href='https://en.wikipedia.org/wiki/Mars_2'>Wikipedia</a>",
     schiaparelli: "<a href='https://en.wikipedia.org/wiki/Schiaparelli_EDM_lander'>Wikipedia</a>",
     beagle2: " <a href='https://en.wikipedia.org/wiki/Beagle_2'>Wikipedia</a> ",
@@ -93,9 +93,11 @@ L.marker([0, -5], {
     zIndexOffset: 999,
 }).bindLabel('<b>《挑战吧！太空》基地</b>', {
     noHide: true,
-    direction: 'left',
+    direction: 'right',
     offset: [20, -30]
 }).bindPopup(customPopup['base']).addTo(marsBase);
+
+
 
 
 var marsFailedSites = new L.LayerGroup().addTo(map).setZIndex(0);

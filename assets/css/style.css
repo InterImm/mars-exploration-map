@@ -22,3 +22,18 @@
 .sharpbtn {
   border-radius:0;
 }
+
+.leaflet-popup-tip {
+    background: #2c3e50;
+}
+.leaflet-popup-content-wrapper {
+    background: #2c3e50;
+    color: white;
+}
+
+.leaflet-popup-content {
+    color: white;
+}
+.leaflet-popup-content a {
+    color: #ff8f8f;
+}
