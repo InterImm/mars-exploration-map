@@ -41,6 +41,22 @@
     width: 400px !important;
 }
 
-.leaflet-popup-content img {
+.leaflet-popup-content-card img {
     width: 100%;
 }
+
+.leaflet-popup-content-card h4 {
+    text-align: center;
+}
+.leaflet-popup-content-card p {
+    margin-top: 0px;
+}
+
+.leaflet-popup-close-button {
+    top: auto !important;
+    bottom: 30px !important;
+    right: 10px !important;
+    font-size: 10px !important;
+    color: #f5b6b6 !important;
+}
+
