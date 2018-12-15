@@ -55,8 +55,8 @@
 .leaflet-popup-close-button {
     top: auto !important;
     bottom: 30px !important;
-    right: 10px !important;
-    font-size: 10px !important;
+    right: 5px !important;
+    font-size: 15px !important;
     color: #f5b6b6 !important;
 }
 
