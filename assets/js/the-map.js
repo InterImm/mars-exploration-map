@@ -106,14 +106,14 @@ var successfulPopup = {
     pheonix: "<div class='leaflet-popup-content-card'><img src='assets/images/Phoenix_landing.jpg'> <h4>凤凰号火星探测器 (<a href='https://en.wikipedia.org/wiki/Phoenix_(spacecraft)'><i class='fa fa-wikipedia-w' aria-hidden='true'></i></a>)</h4> <p>凤凰号是美国国家航空航天局于2003年基于火星侦察兵计划而启动的火星探测项目，凤凰号于2007年8月4日发射，在2008年5月25日成功在火星北极软着陆。这项计划的主要目的是将一枚着陆器送往火星的北极地区，对火星的极地环境进行探测，搜索适合火星上微生物生存的环境，并研究那里的水的历史。</p> <p>除了拍摄照片和气象观测等任务，凤凰号还搭载了长约2.3米的机械臂，它可以向下挖掘，并将挖掘所得的土壤样本送回凤凰号，使用搭载的科学仪器对土壤中的水冰和其他物质（例如矿物，可能的生命物质等）加以分析。</p></div>"
 }
 
-L.marker([0, -5], {
-    icon: baseMarker,
-    zIndexOffset: 999,
-}).bindLabel('<b>《挑战吧！太空》基地</b>', {
-    noHide: true,
-    direction: 'right',
-    offset: [20, -30]
-}).bindPopup(tiaozhanbaPopup['base']).addTo(marsBase);
+// L.marker([0, -5], {
+//     icon: baseMarker,
+//     zIndexOffset: 999,
+// }).bindLabel('<b>《挑战吧！太空》基地</b>', {
+//     noHide: true,
+//     direction: 'right',
+//     offset: [20, -30]
+// }).bindPopup(tiaozhanbaPopup['base']).addTo(marsBase);
 
 
 
@@ -124,7 +124,7 @@ L.marker([-2.07, -6.21], {
         icon: failedMarker,
     }
 ).bindLabel('<b>斯基亚帕雷利EDM登陆器 | Schiaparelli EDM | 2016</b>', {
-    noHide: false,
+    noHide: true,
     offset: [20, -30]
 }).bindPopup(failedPopup['schiaparelli']).addTo(marsFailedSites)
 
@@ -295,7 +295,7 @@ legend.addTo(map);
 
 
 var overlayMaps = {
-    "《挑战吧！太空》": marsBase,
+    // "《挑战吧！太空》": marsBase,
     "成功着陆的火星探测器": marsSites,
     "失败的火星探测器": marsFailedSites,
     "尚未着陆的火星探测器": marsFutureSites
