@@ -103,7 +103,8 @@ var successfulPopup = {
     viking1: "<div class='leaflet-popup-content-card'><img src='assets/images/viking1.jpg'> <h4>海盗1号 (<a href='https://en.wikipedia.org/wiki/Viking_1'><i class='fa fa-wikipedia-w' aria-hidden='true'></i></a>)</h4> <p>海盗号是美国国家航空航天局维京号计划中两艘飞往火星中的第一艘。于 1976 年 7 月 20 号在火星软着陆，是第二艘在火星上软着陆的探测器，也是第一艘在火星上软着陆并且完成任务的探测器。</p><p>在机遇号之前，海盗1号是火星表面任务最长记录的保持者，长达2307天，也就是超过了六年的时间。</p> </div>",
     viking2: "<div class='leaflet-popup-content-card'><img src='assets/images/viking1.jpg'> <h4>海盗2号 (<a href='https://en.wikipedia.org/wiki/Viking_2'><i class='fa fa-wikipedia-w' aria-hidden='true'></i></a>)</h4> <p>海盗2号任务为火星海盗号计划的一部分，其轨道卫星及着陆器基本上与海盗1号的相同。海盗2号的着陆器在火星表面工作了1281个火星日，最终在电池失效后，于1980年4月11日停止运作。轨道卫星则工作到1978年7月25日，共环绕火星706周，传回了近16000份图像。</p></div>",
     pathfinder: "<div class='leaflet-popup-content-card'><img src='assets/images/pathfinder.jpg'> <h4>火星探路者号 (<a href='https://en.wikipedia.org/wiki/Mars_Pathfinder'><i class='fa fa-wikipedia-w' aria-hidden='true'></i></a>)</h4> <p>火星探路者号是一艘在1997年携带探测车登陆火星且建立临时基地的探测器。</p> <p>火星探路者号任务证明了一些创新技术，例如安全气囊和自动回避障碍，这两项在后续的火星车任务都在采用。</p></div>",
-    pheonix: "<div class='leaflet-popup-content-card'><img src='assets/images/Phoenix_landing.jpg'> <h4>凤凰号火星探测器 (<a href='https://en.wikipedia.org/wiki/Phoenix_(spacecraft)'><i class='fa fa-wikipedia-w' aria-hidden='true'></i></a>)</h4> <p>凤凰号是美国国家航空航天局于2003年基于火星侦察兵计划而启动的火星探测项目，凤凰号于2007年8月4日发射，在2008年5月25日成功在火星北极软着陆。这项计划的主要目的是将一枚着陆器送往火星的北极地区，对火星的极地环境进行探测，搜索适合火星上微生物生存的环境，并研究那里的水的历史。</p> <p>除了拍摄照片和气象观测等任务，凤凰号还搭载了长约2.3米的机械臂，它可以向下挖掘，并将挖掘所得的土壤样本送回凤凰号，使用搭载的科学仪器对土壤中的水冰和其他物质（例如矿物，可能的生命物质等）加以分析。</p></div>"
+    pheonix: "<div class='leaflet-popup-content-card'><img src='assets/images/Phoenix_landing.jpg'> <h4>凤凰号火星探测器 (<a href='https://en.wikipedia.org/wiki/Phoenix_(spacecraft)'><i class='fa fa-wikipedia-w' aria-hidden='true'></i></a>)</h4> <p>凤凰号是美国国家航空航天局于2003年基于火星侦察兵计划而启动的火星探测项目，凤凰号于2007年8月4日发射，在2008年5月25日成功在火星北极软着陆。这项计划的主要目的是将一枚着陆器送往火星的北极地区，对火星的极地环境进行探测，搜索适合火星上微生物生存的环境，并研究那里的水的历史。</p> <p>除了拍摄照片和气象观测等任务，凤凰号还搭载了长约2.3米的机械臂，它可以向下挖掘，并将挖掘所得的土壤样本送回凤凰号，使用搭载的科学仪器对土壤中的水冰和其他物质（例如矿物，可能的生命物质等）加以分析。</p></div>",
+    zhurong: "<div class='leaflet-popup-content-card'><img src='assets/images/1920px-Artist’s_impression_of_the_Tianwen-1_mission.jpeg'> <h4>祝融号火星车 (<a href='https://zh.wikipedia.org/wiki/%E7%A5%9D%E8%9E%8D%E5%8F%B7%E7%81%AB%E6%98%9F%E8%BD%A6'><i class='fa fa-wikipedia-w' aria-hidden='true'></i></a>)</h4> <p>祝融号火星车是由中国空间技术研究院制造，搭载在天问一号着陆器上执行火星探测任务的火星车。该探测器于2020年7月23日12时41分由长征五号遥四运载火箭从海南文昌航天发射场发射升空，2021年5月15日上午7时18分在火星乌托邦平原南部预选着陆区着陆。</p> <p>祝融号火星车重240公斤，携带有地形相机、多光谱相机、次表层探测雷达、磁强计以及成分探测仪等共6台科学载荷。祝融号火星车是第一辆搭载磁场探测仪的探测车。</p></div>"
 }
 
 // L.marker([0, -5], {
@@ -192,6 +193,12 @@ L.marker([68.22, -125.7], {
     noHide: true,
     offset: [20, -30]
 }).bindPopup(successfulPopup['pheonix']).addTo(marsSites),
+L.marker([25.1, 109.9], {
+    icon: siteMarker,
+}).bindLabel('<b>祝融号 | Zhurong | 2021</b>', {
+    noHide: true,
+    offset: [20, -30]
+}).bindPopup(successfulPopup['zhurong']).addTo(marsSites),
 
 
 
@@ -214,7 +221,7 @@ L.marker([-4.590, 137.442], {
         noHide: true,
         offset: [20, -30]
     }).bindPopup( successfulPopup['opportunity'] ).addTo(marsSites);
-    
+
 
 L.marker([4.5, 135.9], {
         icon: workingMarker,
@@ -223,7 +230,7 @@ L.marker([4.5, 135.9], {
         direction: 'left',
         offset: [20, -30]
     }).bindPopup(workingPopup['insight']).addTo(marsSites);
-    
+
 
 
 
